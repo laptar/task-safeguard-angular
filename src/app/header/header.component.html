@@ -1,0 +1,13 @@
+<header class="header" id="home">
+  <div class="container">
+    <svg class="logo" width="162" height="35">
+      <use href="../../assets/img/sprite.svg#icon-logo-name"></use>
+    </svg>
+    <nav class="navMenu">
+      <app-nav-menu *ngIf="showContainer; else mobMenu"></app-nav-menu>
+      <ng-template #mobMenu>
+        <app-nav-menu-mob></app-nav-menu-mob>
+      </ng-template>
+    </nav>
+  </div>
+</header>

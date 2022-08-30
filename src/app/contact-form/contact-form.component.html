@@ -1,0 +1,20 @@
+<div class="formSection">
+  <div class="container">
+    <div class="titleBox">
+      <h2 class="title" id="contactUs"><span>CONTACT</span> US</h2>
+      <a class="up" href="#home">
+        <svg class="arrow" width="23" height="11">
+          <use href="../../assets/img/sprite.svg#icon-arrow-up"></use>
+        </svg>
+      </a>
+    </div>
+    <form class="form">
+      <app-input *ngFor="let item of inputs" [inp]="item"></app-input>
+      <label>
+        <span class="inputName">Write Us Messages</span>
+        <textarea name="message"></textarea>
+      </label>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<label class="lableItem">
+  <span class="inputName">{{ inp.label }}</span>
+  <input
+    class="input"
+    change="{onChange}"
+    (blur)="handleFocused()"
+    pattern="{{ inp.pattern }}"
+  />
+  <span class="errMsg">{{ inp.errorMessage }}</span>
+</label>

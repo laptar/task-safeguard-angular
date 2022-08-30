@@ -1,0 +1,78 @@
+.menuBtn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+}
+.menuBtn::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 18px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 1px;
+  transition: transform 300ms ease-in-out;
+}
+.menuBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  width: 18px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 1px;
+  transition: transform 300ms ease-in-out;
+}
+.menuBtn > div {
+  width: 30px;
+  height: 3px;
+  border-radius: 1px;
+  background-color: #000;
+  transition: transform 300ms ease-in-out;
+}
+
+.menuBtn.close > div {
+  transform: rotateZ(-45deg);
+}
+.menuBtn.close::before {
+  transform: translateY(4px) translateX(2px) rotateZ(45deg);
+}
+.menuBtn.close::after {
+  transform: translateY(-5px) translateX(-2px) rotateZ(45deg);
+}
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow-y: scroll;
+  z-index: 100;
+  width: 100vw;
+  height: calc(100vh - 115px);
+  margin: 0 auto;
+  padding: 15px 24px;
+  background-color: #ffbc00;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(100vh * 0.035);
+}
+
+.listTitle {
+  margin-top: calc(100vh * 0.07);
+  margin-bottom: calc(100vh * 0.035);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.5;
+}
+.listElm {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+}

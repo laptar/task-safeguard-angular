@@ -1,0 +1,56 @@
+<div>
+  <button
+    class="menuBtn"
+    [class.close]="isOpen"
+    type="button"
+    (click)="handlerTogleMenu()"
+  >
+    <div></div>
+  </button>
+  <div class="menu" *ngIf="isOpen">
+    <ul class="list">
+      <li>
+        <a class="listElm" href="#home" (click)="handlerTogleMenu()"> Home </a>
+      </li>
+      <li>
+        <a class="listElm" href="#home" (click)="handlerTogleMenu()">
+          What we do
+        </a>
+      </li>
+      <li>
+        <a class="listElm" href="#home" (click)="handlerTogleMenu()">
+          About us
+        </a>
+      </li>
+      <li>
+        <a class="listElm" href="#home" (click)="handlerTogleMenu()">
+          Our history
+        </a>
+      </li>
+      <li>
+        <a class="listElm" href="#contactUs" (click)="handlerTogleMenu()">
+          Contact us
+        </a>
+      </li>
+    </ul>
+    <p class="listTitle" href="#home" (click)="handlerTogleMenu()">Services</p>
+    <ul class="list">
+      <li>
+        <a class="listElm" href="#home"> Training and Implementation </a>
+      </li>
+      <li>
+        <a class="listElm" href="#home"> Cyber Consultants </a>
+      </li>
+      <li>
+        <a class="listElm" href="#home" (click)="handlerTogleMenu()">
+          Consultancy and brand protection
+        </a>
+      </li>
+      <li>
+        <a class="listElm" href="#home" (click)="handlerTogleMenu()">
+          Software
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
